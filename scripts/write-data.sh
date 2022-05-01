@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 ../write_to_cassandra.py
+python3 write_to_cassandra.py
