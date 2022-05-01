@@ -27,9 +27,7 @@ class CassandraClient:
             print(row)
 
     def select_product_reviews(self, product_id):
-        # query = f"SELECT review_body FROM products WHERE product_id = '{product_id}';"
-        query = f"SELECT * FROM products;"
-        print(query)
+        query = f"SELECT review_body FROM products WHERE product_id = '{product_id}';"
         return list(self.session.execute(query))
 
     def select_product_reviews_star(self, product_id, star_rating):
