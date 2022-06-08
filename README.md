@@ -1,37 +1,31 @@
+twcs.csv should be in this folder.
+
 ```
 docker-compose up -d
 ```
 ```
 docker ps
 ```
-![image](https://user-images.githubusercontent.com/54286666/172711961-5ebea0a4-7439-4d48-887b-3f8718fc675c.png)
+![image](https://user-images.githubusercontent.com/54286666/172715304-20247d41-5a93-4c02-bc7d-599d11778b6e.png)
 
-```
-sh create-topic.sh
-```
-
-```
-docker run -it --rm --network kafka-network -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181 bitnami/kafka:latest kafka-topics.sh --list  --bootstrap-server kafka-server:9092
-```
-![image](https://user-images.githubusercontent.com/54286666/172712109-db6dff3d-0aea-4d55-a0b8-ec922c9a5378.png)
 
 Launch consumer:
 ```
 sh start-consumer.sh
 ```
 
-In new terminal window launch producer:
+In the new terminal window start sending tweets with python app:
 ```
-sh start-producer.sh
+sh start-producer-app.sh
 ```
-
-Messages are sent from producer:
-![image](https://user-images.githubusercontent.com/54286666/172712413-873821c4-f739-4908-9745-ad0677e4fd51.png)
+![image](https://user-images.githubusercontent.com/54286666/172718806-a84bbed5-f46a-4653-bfb9-e002959d7152.png)
 
 Messages are received by consumer:
-![image](https://user-images.githubusercontent.com/54286666/172712538-f371b52a-01b7-4d6a-9bdb-d6c8f738483e.png)
-
+![image](https://user-images.githubusercontent.com/54286666/172718486-5f0c0b83-3b66-4b50-9d7d-7733829ecc17.png)
+(...)
+![image](https://user-images.githubusercontent.com/54286666/172718637-bbd61ec0-4212-42a0-873a-823fc5830014.png)
+(sorry i did not wait for all the messages to process:()
 
 ```
-docker-compose down -d
+docker-compose down
 ```
