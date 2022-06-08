@@ -11,6 +11,6 @@ with open('twcs.csv', 'r') as f:
     tweets_file = csv.reader(f)
     header = next(tweets_file)
     for row in tweets_file:
-        row[3] = datetime.now().strftime("%c")
+        row[3] = datetime.now().strftime("%d_%m_%Y_%H_%M")
         producer.send('tweets', row)
         producer.flush()
