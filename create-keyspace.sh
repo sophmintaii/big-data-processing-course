@@ -10,7 +10,8 @@ DDL_commands="CREATE KEYSPACE hw4_myntiuk WITH REPLICATION = {
                     product_id ascii,  
                     product_title text,  
                     review_body text,
-                    star_rating tinyint, 	
+                    star_rating tinyint, 
+                    review_date date,  	
                     PRIMARY KEY (product_id, star_rating)); 
                     
                 CREATE TABLE reviews ( 

@@ -3,6 +3,7 @@ import pandas as pd
 from cassandra.cluster import Cluster
 from tqdm import tqdm
 
+
 class CassandraClient:
     def __init__(self, host, port, keyspace):
         self.host = host
@@ -26,6 +27,7 @@ class CassandraClient:
             query = f"INSERT INTO {table} ({cols}) VALUES ({str([row[col] for col in df.columns])[1:-1]})"
             self.execute(query)
 
+
 if __name__ == '__main__':
     host = 'localhost'
     port = 9042
@@ -39,8 +41,10 @@ if __name__ == '__main__':
     client = CassandraClient(host, port, keyspace)
     client.connect()
 
-    client.insert_records(table='products', df=df[['customer_id', 'product_id', 'product_title', 'review_body', 'star_rating']])
+    client.insert_records(table='products',
+                          df=df[['customer_id', 'product_id', 'product_title', 'review_body',
+                                 'review_date', 'star_rating']])
     client.insert_records(table='reviews', df=df[['customer_id', 'review_id', 'product_id', 'product_title',
-                                                 'star_rating', 'verified_purchase', 'review_body', 'review_date']])
+                                                  'star_rating', 'verified_purchase', 'review_body', 'review_date']])
 
     client.close()
