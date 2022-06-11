@@ -9,6 +9,6 @@
 * [Homework #6: Kafka writing through code](https://github.com/sophmintaii/big-data-processing-course/tree/hw6-kafka-writing)
 * [Homework #7: Kafka reading through code](https://github.com/sophmintaii/big-data-processing-course/tree/hw7-kafka-reading)
 * [Homework #8: Kafka + Cassandra](https://github.com/sophmintaii/big-data-processing-course/tree/hw8-kafka-cassandra)
-* [Homework #9: Spark installation](https://github.com/sophmintaii/big-data-processing-course/tree/h9-spark)
+* [Homework #9: Spark installation](https://github.com/sophmintaii/big-data-processing-course/tree/hw9-spark)
 
 
