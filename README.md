@@ -1,15 +1,21 @@
-# Big Data Processing Course
+# Homework 10: Spark installation
 
-## Homeworks
-* [Homework #1: Docker basics](https://github.com/sophmintaii/big-data-processing-course/tree/hw1-docker-basics)
-* [Homework #2: Cassandra installation](https://github.com/sophmintaii/big-data-processing-course/tree/hw2-cassandra-installation)
-* [Homework #3: Cassandra data modeling](https://github.com/sophmintaii/big-data-processing-course/tree/hw3-cassandra-data-modeling)
-* [Homework #4: Cassandra interaction through Python](https://github.com/sophmintaii/big-data-processing-course/tree/hw4-cassandra-interaction-python)
-* [Homework #5: Kafka installation](https://github.com/sophmintaii/big-data-processing-course/tree/hw5-kafka)
-* [Homework #6: Kafka writing through code](https://github.com/sophmintaii/big-data-processing-course/tree/hw6-kafka-writing)
-* [Homework #7: Kafka reading through code](https://github.com/sophmintaii/big-data-processing-course/tree/hw7-kafka-reading)
-* [Homework #8: Kafka + Cassandra](https://github.com/sophmintaii/big-data-processing-course/tree/hw8-kafka-cassandra)
-* [Homework #9: Spark installation]() todo
-* [Homework #10: Spark data processing]() todo
+## Instructions on running:
 
+Clone the repository
+```bash
+git clone git@github.com:sophmintaii/big-data-processing-course.git
+cd big-data-processing-course
+git checkout hw9-spark
+```
+Make sure you are in the project directory before running the following commands.
 
+docker compose:
+![image](https://user-images.githubusercontent.com/54286666/173173295-69a33975-bf49-4adb-99d7-0e641ff69b72.png)
+
+count the rows:
+![image](https://user-images.githubusercontent.com/54286666/173173243-0e8bbffc-4f64-4360-bb90-4f604397d629.png)
+![image](https://user-images.githubusercontent.com/54286666/173173226-bc374736-dda3-4e6e-9a68-740bfa30717a.png)
+
+compose down:
+![image](https://user-images.githubusercontent.com/54286666/173173278-14ffbe2f-ea88-440a-b97e-6a88f3bb4731.png)
