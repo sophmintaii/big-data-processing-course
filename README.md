@@ -6,7 +6,7 @@ Clone the repository
 ```bash
 git clone git@github.com:sophmintaii/big-data-processing-course.git
 cd big-data-processing-course
-git checkout hw4-cassandra-interaction-python
+git checkout hw8-kafka-cassandra
 ```
 
 Make sure you are in the project directory before running the following commands.
