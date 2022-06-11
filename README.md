@@ -1,4 +1,4 @@
-# Homework 4: Cassandra interaction through python code
+# Homework 8: Kafka + Cassandra
 
 ## Instructions on running:
 
