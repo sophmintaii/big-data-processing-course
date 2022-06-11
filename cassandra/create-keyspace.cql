@@ -2,32 +2,36 @@ CREATE KEYSPACE hw8_myntiuk WITH REPLICATION = {'class' : 'SimpleStrategy', 'rep
 
 USE hw8_myntiuk;
 
-CREATE TABLE IF NOT EXISTS uid_fraud (
-	uid text,
-	is_fraud int,
+CREATE TABLE IF NOT EXISTS 
+uid_fraud (
+	step int, 
+	type text, 
 	amount float,
-    	transaction_date date,
-    	transaction_type text,
-    	PRIMARY KEY (uid, isFraud)
-    	);
-    	
-    	
-CREATE TABLE IF NOT EXISTS uid_large (
-	uid text,
-	is_fraud int,
-	amount float,
-	transaction_date date,	
-	transaction_type text,
-	PRIMARY KEY (uid, amount)
+	nameOrig ascii,
+	oldbalanceOrg float,
+	newbalanceOrig float,
+	nameDest ascii,
+	oldbalanceDest float,
+	newbalanceDest float,
+	isFraud int,
+	isFlaggedFraud int,
+	transactionDate date,
+	PRIMARY KEY (nameOrig, isFraud)
 	);
 	
-	
-CREATE TABLE IF NOT EXISTS uid_income (
-	uid text,
-	is_fraud int,
+CREATE TABLE IF NOT EXISTS 
+uid_date (
+	step int, 
+	type text, 
 	amount float,
-	transaction_date date,	
-	transaction_type text,
-	PRIMARY KEY (uid, transaction_date)
+	nameOrig ascii,
+	oldbalanceOrg float,
+	newbalanceOrig float,
+	nameDest ascii,
+	oldbalanceDest float,
+	newbalanceDest float,
+	isFraud int,
+	isFlaggedFraud int,
+	transactionDate date,
+	PRIMARY KEY (nameDest, transactionDate)
 	);
-

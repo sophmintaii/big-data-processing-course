@@ -1,0 +1,12 @@
+FROM python:3.9-slim
+
+RUN pip install --upgrade pip
+RUN pip install kafka-python
+RUN pip install flask
+RUN pip install cassandra-driver
+
+COPY ./app_rest.py .
+COPY ./from_kafka.py .
+
+ENTRYPOINT ["python3", "app_rest.py"]
+

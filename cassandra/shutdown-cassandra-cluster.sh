@@ -1,4 +1,4 @@
 #!/bin/bash
-docker stop cass-node
-docker rm cass-node
+docker stop cassandra-node
+docker rm cassandra-node
 
